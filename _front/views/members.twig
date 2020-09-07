@@ -15,16 +15,16 @@
     <table class="table table-striped">
         <thead>
           <tr>
-            {% for index , valeur in members[0] %}
+            {% for index , value in members[0] %}
               <th scope="col">{{index}}</th>
             {% endfor %}
           </tr>
         </thead>
         <tbody>
             {% for members in members %}
-              <tr>
-                {% for valeur in members %}
-                  <td scope="col">{{valeur}}</td>
+              <tr onclick="document.location='/edit/{{ members.id }}'">
+                {% for value in members %}
+                  <td scope="col">{{value}}</td>
                 {% endfor %}
               </tr>
             {% endfor %}
