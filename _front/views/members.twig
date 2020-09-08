@@ -22,7 +22,7 @@
         </thead>
         <tbody>
             {% for members in members %}
-              <tr onclick="document.location='/edit/{{ members.id }}'">
+              <tr onclick="document.location='/edit/{{ members.id }}'" style="cursor: pointer">
                 {% for value in members %}
                   <td scope="col">{{value}}</td>
                 {% endfor %}
@@ -30,6 +30,8 @@
             {% endfor %}
         </tbody>
       </table>
+
+      <a class="btn btn-primary mt-3" href='./insert'>Ajouter un members</a>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
